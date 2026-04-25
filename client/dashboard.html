@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard - FreelanceHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">FreelanceHub</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Browse Services</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Page Title -->
+    <h1 style="margin: 2rem 0 1.5rem 0;">My Dashboard</h1>
+
+    <!-- Error Banner -->
+    <div id="error-banner" class="error-banner"></div>
+
+    <!-- Tab Buttons -->
+    <div class="tab-buttons">
+      <button id="tab-saved" class="tab-btn active">Saved Services</button>
+      <button id="tab-hired" class="tab-btn">Hired Services</button>
+    </div>
+
+    <!-- Saved Services Tab -->
+    <div id="saved-panel" class="tab-panel show">
+      <div id="saved-grid" class="service-grid"></div>
+      <div id="saved-empty" class="empty-state" style="display: none;">
+        <div class="empty-state-icon">📌</div>
+        <p class="empty-state-text">No saved services yet. Start saving your favorites!</p>
+      </div>
+    </div>
+
+    <!-- Hired Services Tab -->
+    <div id="hired-panel" class="tab-panel">
+      <div id="hired-grid" class="service-grid"></div>
+      <div id="hired-empty" class="empty-state" style="display: none;">
+        <div class="empty-state-icon">✨</div>
+        <p class="empty-state-text">No hired services yet. Hire a freelancer to get started!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 FreelanceHub. All rights reserved.</p>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

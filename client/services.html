@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Services - FreelanceHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">FreelanceHub</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Browse Services</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Page Title -->
+    <h1 style="margin: 2rem 0 1.5rem 0;">Browse Services</h1>
+
+    <!-- Error Banner -->
+    <div id="error-banner" class="error-banner"></div>
+
+    <!-- Search Bar -->
+    <input type="text" id="search-input" class="search-bar" placeholder="Search services...">
+
+    <!-- Filters and Sort -->
+    <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center;">
+      <div id="category-filters" class="filters">
+        <button class="filter-btn active" data-category="All">All</button>
+        <button class="filter-btn" data-category="Design">Design</button>
+        <button class="filter-btn" data-category="Development">Development</button>
+        <button class="filter-btn" data-category="Writing">Writing</button>
+        <button class="filter-btn" data-category="Marketing">Marketing</button>
+      </div>
+      <select id="sort-select" class="sort-select">
+        <option value="default">Sort: Default</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Rating</option>
+      </select>
+    </div>
+
+    <!-- Service Grid -->
+    <div id="services-grid" class="service-grid"></div>
+
+    <!-- Drop Zone -->
+    <div id="drop-zone" class="drop-zone">
+      🎯 Drop a service here to save it
+    </div>
+  </div>
+
+  <!-- Detail Modal -->
+  <div id="detail-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <img id="modal-image" src="" alt="Service" class="modal-image">
+      <h2 id="modal-title" class="modal-title"></h2>
+      <p id="modal-seller" class="modal-seller"></p>
+      <p id="modal-description" class="modal-description"></p>
+      <div class="modal-details">
+        <div class="detail-item">
+          <div class="detail-label">Price</div>
+          <div class="detail-value">$<span id="modal-price"></span></div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Delivery</div>
+          <div class="detail-value"><span id="modal-delivery"></span> days</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Rating</div>
+          <div class="detail-value"><span id="modal-rating"></span>★</div>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button id="hire-btn" class="btn-primary">Hire Now</button>
+        <button id="detail-cancel-btn" class="btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm Modal -->
+  <div id="confirm-modal" class="modal-overlay">
+    <div class="modal-content">
+      <h2 style="margin-bottom: 1rem;">Confirm Hire</h2>
+      <p id="confirm-message" style="margin-bottom: 1.5rem;"></p>
+      <div class="modal-actions">
+        <button id="confirm-hire-btn" class="btn-primary">Confirm</button>
+        <button id="confirm-cancel-btn" class="btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 FreelanceHub. All rights reserved.</p>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>
